@@ -4,6 +4,8 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
+
+  
     {
       "name": "Launch Chrome against localhost",
       "request": "launch",
@@ -92,6 +94,19 @@
       "program": "scripts/train.py",
       "console": "integratedTerminal",
       "args": ["semantic_nerf"]
+    },
+    {
+      "name": "Python: render nerfacto",
+      "type": "python",
+      "request": "launch",
+      "program": "scripts/render.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--load_config=outputs/poster/nerfacto/2023-03-07_140755/config.yml",
+        "--traj=filename", 
+        "--camera_path_filename=colab/camera_path.json",
+        "--output_format=images",
+      ]
     }
   ]
 }
