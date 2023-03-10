@@ -5,6 +5,8 @@
   "version": "0.2.0",
   "configurations": [
 
+
+
   
     {
       "name": "Launch Chrome against localhost",
@@ -104,8 +106,20 @@
       "args": [
         "--load_config=outputs/poster/nerfacto/2023-03-07_140755/config.yml",
         "--traj=filename", 
-        "--camera_path_filename=colab/camera_path.json",
+        "--camera_path_filename=colab/camera_path_short.json",
         "--output_format=images",
+      ]
+    },
+    {
+      "name": "Python: render raw nerfacto",
+      "type": "python",
+      "request": "launch",
+      "program": "scripts/render_raw.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--load_config=outputs/poster/nerfacto/2023-03-07_140755/config.yml",
+        "--traj=filename", 
+        "--camera_path_filename=colab/camera_path_short.json",
       ]
     }
   ]

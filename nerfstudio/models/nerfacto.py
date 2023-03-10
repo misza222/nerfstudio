@@ -277,6 +277,12 @@ class NerfactoModel(Model):
             "rgb": rgb,
             "accumulation": accumulation,
             "depth": depth,
+            "samples_rgb": field_outputs[FieldHeadNames.RGB],
+            "samples_density": field_outputs[FieldHeadNames.DENSITY],
+            "samples_weights": weights,
+            "ray_samples_frustums_origins": ray_samples.frustums.origins,
+            "ray_samples_frustums_directions": ray_samples.frustums.directions,
+            "ray_samples_frustums_ends": ray_samples.frustums.ends,
         }
 
         if self.config.predict_normals:
